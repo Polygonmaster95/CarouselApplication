@@ -1,0 +1,62 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.FagMaalOgFormaal>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="findUddannelseTitle">
+    <h3>Velkommen til KUU SVJ</h3>
+</div>
+
+
+<!-- Text Section 1 (With image)-->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="pull-left col-sm-7 col-md-7 col-lg-7">
+        <h5>@CurrentPage.textSection1</h5>
+    </div>
+    <div class="pull-right col-sm-5 col-md-5 col-lg-5" id="textPageImage">
+        <img src="@CurrentPage.image1" />
+    </div>
+</div>
+
+
+<!-- Text Section 2 -->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+        <h5>@CurrentPage.textsection2</h5>
+</div>
+
+
+<!-- Text Section 3 (With image)-->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="pull-left col-sm-7 col-md-7 col-lg-7">
+        <h5>@CurrentPage.textsection3</h5>
+    </div>
+
+    <div class="pull-right col-sm-5 col-md-5 col-lg-5" id="textPageImage">
+        <img src="@CurrentPage.image2" />
+    </div>
+</div>
+
+
+<!-- Text Section 4 -->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <h5>@CurrentPage.textsection4</h5>
+</div>
+
+
+<!-- Text Section 5 (With image)-->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="pull-left col-sm-7 col-md-7 col-lg-7">
+        <h5>@CurrentPage.textsection5</h5>
+    </div>
+
+    <div class="pull-right col-sm-5 col-md-5 col-lg-5" id="textPageImage">
+        <img src="@CurrentPage.image3" />
+    </div>
+</div>
+
+
+<!-- Text Section 6 -->
+<div class="textContainer col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <h5>@CurrentPage.textsection6</h5>
+</div>

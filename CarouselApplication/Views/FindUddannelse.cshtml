@@ -1,0 +1,200 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.FindUddannelse>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="findUddannelseTitle">
+    <h3>Velkommen til KUU SVJ</h3>
+</div>
+
+<div classa="container" id="findUddannelseContainer">  <!-- Container for uddannelses centre -->
+
+    <div class="Expanding" id="ExpandingEsbjerg">    <!-- Efe, Esbjerg -->
+        <img src="~/images/M-Final_TTYSU1461.jpg" id="ExpandingImage" />
+        <div class="ExpandingOverlay1">
+            <img src="~/images/efeLogo.png" id="ExpandingLogo" />
+        </div>
+
+            <h2 class="ExpandingTitle">Esbjerg</h2>
+            <p class="Addresse">
+                Esbjerg Forberedende Erhvervsskole, Produktionsskolen Esbjerg <br />
+                KUU Center <br />
+                Bavnehøjvej 12 <br />
+                6700 Esbjerg <br />
+                Tlf.: 76 12 30 34
+            </p>
+        <div class="erhvervstemaer">
+            <h4 class="erhvervstemaerTitle">Her kan du studere:</h4>
+
+            <h5>“Mad, Mennesker og Sundhed”</h5>
+            <p>Tænker du i sund kost og ernæring og vil du gerne arbejde med mennesker, så er det her helt 
+            sikkert noget for dig. Uddannelsen kan give dig mulighed for at arbejde som erhvervsassistent i en 
+            café, et køkken, i en daginstitution eller indenfor Social-og Sundhedsområdet.</p>
+
+
+            <h5>“Byg, Bolig, Innovation & Produktudvikling”</h5>
+            <p>
+                Er du lidt af en handyman? Er hænderne skruet ordentligt på og har du lyst til at arbejde med håndværk, 
+                montage eller ejendomsservice. Tænker du også energi og miljø og har lyst til at afprøve nye ideer, så ligger det 
+                her lige til højrebenet.
+            </p>
+
+
+            <h5>“Handel og kundeservice”</h5>
+            <p>
+                Vil du gerne have med kunder at gøre? Kan du se dig selv i en butik, på et lager eller inden for et andet servicefag? 
+                Så skal du vælge denne uddannelse og måske satse på at blive erhvervsassistent indenfor området.
+            </p>
+
+            <div class="ExpandingButtons" id="ExpandingButtonsEsbjerg">
+                <a class="ghostButton" href="#">Ansatte</a>
+
+                <a class="ghostButton" href="#">Hjemmeside</a>
+            </div>
+
+        </div>
+        
+
+       <!-- <div class="staffContainer">
+            <div>
+                <p>Forstander:</p>
+                <h4>Henrik Bruun</h4>
+                <h5>bruun@espro.dk</h5>
+            </div>
+
+            <div>
+                <p>Koordinator:</p>
+                <h4>Kasper Lønborg</h4>
+                <h5>ktl@espro.dk</h5>
+            </div>
+
+            <div>
+                <p>Mentor:</p>
+                <h4>Heette Rohde</h4>
+                <h5>mr@espro.dk</h5>
+            </div>
+
+            <br />
+            <div class="StaffDivider"></div>
+
+            <div>
+                <p>Kontaktpersoner/Undervisere:</p>
+                <h4>Moises Edelman</h4>
+                <h5>me@espro.dk</h5>
+            </div>
+
+            <div>
+                <p></p>
+                <h4>Chris Sawagucki</h4>
+                <h5>cs@espro.dk</h5>
+            </div>
+        </div> -->
+    </div>
+
+
+    <div class="Expanding" id="ExpandingVarde">   <!-- Produktionsskolen, Varde -->
+        <img src="~/images/1.jpg" id="ExpandingImage" />
+        <div class="ExpandingOverlay2">
+            <img src="~/images/VardeLogo.png" id="ExpandingLogo" />
+        </div>
+
+            <h2 class="ExpandingTitle">Varde</h2>
+        <p class="Addresse">
+            Produktionsskolen Vest <br />
+            Hammeren 3 <br />
+            6800 Varde <br />
+            Tlf.: 75 28 77 22 <br />
+        </p>
+        <div class="erhvervstemaer">
+            <h4 class="erhvervstemaerTitle">Her kan du studere:</h4>
+
+            <h5>“Turisme, Kultur og Fritid”</h5>
+            <p>
+                Her i Varde området har vi hvert år besøg af mange turister. Kunne du tænke dig at være en del af dette ?
+                Er du indstillet på at lære mere sprog, vide mere om mulighederne indenfor kultur og fritid i din kommune og lære om afsætning, 
+                kundebetjening og service. Så tag springet og tilmeld dig denne uddannelse.
+            </p>
+
+            <div class="ExpandingButtons">
+                <a class="ghostButton" href="#">Ansatte</a>
+
+                <a class="ghostButton" href="#">Mere om faget</a>
+
+                <a class="ghostButton" href="#">Hjemmeside</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Expanding" id="ExpandingRibe">   <!-- Lustrupholm, Ribe -->
+        <img src="~/images/hyc-itc-students-large.jpg" id="ExpandingImage"/>
+        <div class="ExpandingOverlay3">
+            <img src="~/images/lustrupholm-logo.png" id="ExpandingLogo" />
+        </div>
+
+        <h2 class="ExpandingTitle">Ribe</h2>
+        <p class="Addresse">
+            Produktionsskolen Lustrupholm <br />
+            Lustrupvej 4 <br />
+            6760 Ribe <br />
+            Tel.: +45 75 411 611 <br />
+            Email: lustrupholm@lustrupholm.dk <br />
+        </p>
+        <div class="erhvervstemaer">
+            <h4 class="erhvervstemaerTitle">Her kan du studere:</h4>
+
+            <h5>“Mad, turisme og landbrug”</h5>
+            <p>
+                Elsker du at arbejde med mad, mennesker og dyr ? Har du tænkt på job som dyrepasser, medhjælper i landbrug, arbejde på en 
+                maskinstation eller guide turister rundt i området og måske endda sørge for mad og drikke i cafeen? Så er dette et spændende tilbud. 
+                Du kan måske senere opnå ansættelse som erhvervsassistent indenfor områderne.
+            </p>
+
+            <div class="ExpandingButtons">
+                <a class="ghostButton" href="#">Ansatte</a>
+
+                <a class="ghostButton" href="#">Mere om faget</a>
+
+                <a class="ghostButton" href="#">Hjemmeside</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="Expanding" id="ExpandingVejen">  <!-- Vejen -->
+        <img src="~/images/young.people.large.png" id="ExpandingImage"/>
+        <div class="ExpandingOverlay4">
+            <img src="~/images/Logo-Vejen.png" id="ExpandingLogo" />
+        </div>
+
+            <h2 class="ExpandingTitle">Vejen</h2>
+            <p class="Addresse">
+                Produktionsskolen Vejen <br />
+                Dalgas Allé 5 <br />
+                6600 Vejen <br />
+                Tlf.: 28 95 61 22 <br />
+                Email: jep@psvejen.net <br />
+            </p>
+            <div class="erhvervstemaer">
+                <h4 class="erhvervstemaerTitle">Her kan du studere:</h4>
+
+                <h5>“Mad, Sundhed og Kundeservice”</h5>
+                <p>
+                    Du får gennem denne nye uddannelse mulighed for at afklare om du kunne tænke dig at arbejde med madservice, blive slagter, 
+                    arbejde med mennesker eller service og handel. Uddannelsen tager udgangspunkt i dig og dine forventninger og bygger
+                    samtidig på holddannelse og fællesskab.
+                </p>
+
+                <div class="ExpandingButtons">
+                    <a class="ghostButton" href="#">Ansatte</a>
+
+                    <a class="ghostButton" href="#">Mere om faget</a>
+
+                    <a class="ghostButton" href="#">Hjemmeside</a>
+                </div>
+
+        </div>
+    </div>
+</div>

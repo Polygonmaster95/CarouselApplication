@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@{
+    var selection = Model.Content.Site().Children.Where(x => x.IsVisible());
+    var navSelector = "nav2";
+    bool firstItemDropdown = true;
+}
+
+    <ul>
+        @{
+            var HomePage = Model.Content.AncestorsOrSelf(1).FirstOrDefault();
+        }
+        <li class="active dropdown nav1"><a href="@HomePage.Url" class="dropbtn">@HomePage.Name</a></li>
+                @foreach (var item in selection)    /* <-- Initial loop */
+                {
+                    if (firstItemDropdown)
+                    {
+                        navSelector = "nav1";
+                        firstItemDropdown = false;
+                    } else
+                    {
+                        navSelector = "nav2";
+                    }
+                    <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null) dropdown @navSelector">
+
+                        <a href="@item.Url" class="dropbtn">@item.Name</a>
+                        <div class="dropdown-content">
+                            @foreach (var dropdownItem in item.Children.Where(x => x.IsVisible()))  /* <-- Loop within the loop */
+                            {
+
+                                <a href="@dropdownItem.Url" class="@(dropdownItem.IsAncestorOrSelf(Model.Content) ? "current" : null)">@dropdownItem.Name</a>
+
+                            }
+                        </div>
+                     </li>
+        }
+    </ul>

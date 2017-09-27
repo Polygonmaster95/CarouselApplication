@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.News>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+    var NewsOverview = CurrentPage.Parent;
+    <script src="~/scripts/lightbox.js"></script>
+    <link href="~/css/lightbox.css" rel="stylesheet" />
+}
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div><a role="button" class="goBackButton" href="@NewsOverview.Url">Go back, plz</a></div>
+        
+        <div class="col-lg-8 pull-left">
+            <h2>@CurrentPage.Name</h2>
+            @CurrentPage.newsText
+        </div>
+        <div class="col-lg-4 pull-left">
+            <h4>Created: @Model.Content.CreateDate.ToString("D")</h4>
+            <h4>Last edited: @Model.Content.UpdateDate.ToString("D")</h4>
+        </div>
+    </div>
+</div>

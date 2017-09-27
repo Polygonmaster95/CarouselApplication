@@ -1,0 +1,94 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using Umbraco.Core
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- jquary  -->
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- Javascript -->
+        <script src="~/js/Script.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+        <link href="~/css/Style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <title>@CurrentPage.pageTitle | @CurrentPage.siteName</title>
+    </head>
+    <body>
+        <!-- Hamburger menu starts here -->
+        <header>
+            <input id="toggle-menu" type="checkbox" />
+
+            <label for="toggle-menu" class="menu-on">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <label for="toggle-menu" class="menu-off"></label>
+
+            <nav class="colapse-nav">
+
+                <ul>
+
+                    @Html.Partial("CollapseNavigation")
+
+                </ul>
+ 
+            </nav>
+            <!-- Hamburger menu ends here -->
+
+            @{
+              var HomePage = Model.Content.AncestorsOrSelf(1).FirstOrDefault(); 
+            }
+
+            <div class="container" id="logoDiv">
+                <div id="logoRow">
+                    <div class="logoBG row col-xs-2 col-xs-offset-5 col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5 col-xl-2 col-xl-offset-5 center">
+                        <div id="logoInner">
+                            <a href="@HomePage"><img src="~/images/FINALKUULOGO3.png" class="img-responsive" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+
+
+        <div class="container-fluid" id="headerParent">
+
+                @Html.Partial("DropdownNavigation")
+
+        </div>
+        
+    @RenderBody()
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>

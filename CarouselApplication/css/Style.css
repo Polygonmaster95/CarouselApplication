@@ -1,0 +1,904 @@
+﻿
+
+/*
+Goolge datalist holde dem indenfor deres kasse.
+*/
+
+body {
+    text-decoration: none !important;
+    font-family: 'Asap', sans-serif;
+    color: #2f3c2e;
+}
+
+.menu-on {
+    background-color: #f9f9f9;
+    color: #fff;
+    position: absolute;
+    right: 9px;
+    top: 49px;
+    z-index: 3;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+    .menu-on:active {
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+.menu-on div {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0px;
+}
+
+.menu-off {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: none;
+}
+
+nav.colapse-nav {
+    background-color: white;
+    /*display: block;*/
+    position: absolute;
+    right: -45%;
+    top: 88px;
+    width: 40%;
+    z-index: 3;
+    text-align: center;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    transition: transform 200ms ease-in;
+    text-decoration: none;
+}
+    nav.colapse-nav li {
+        display: block;
+        padding: 0;
+    }
+    nav.colapse-nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    nav.colapse-nav a {
+        text-decoration: none;
+        color: #333;
+    }
+    nav.colapse-nav li:hover {
+        
+    }
+
+    nav.colapse-nav a:hover {
+        background-color: #f1f1f1
+    }
+        
+#toggle-menu {
+    display: none;
+}
+
+    #toggle-menu:checked ~ nav.colapse-nav {
+        transform: translate(-100%, 0);
+    }
+
+#toggle-menu:checked ~ .menu-off {
+    display: block;
+}
+
+#toggle-menu:checked ~ nav.colapse-nav {
+    display: block;
+}
+
+
+nav.colapse-nav .dropbtn {
+    font-size: 16px;
+    border: none;
+    height: 45px;
+    cursor: pointer;
+    padding: 10px 0px 0px 0px;
+    display:block;
+    color: #333;
+}
+
+    nav.colapse-nav .dropbtn a {
+        color: #333;
+    }
+    
+    
+    nav.colapse-nav .dropdown-content {
+        right: 100%;
+        position: absolute;
+        top: -10px;
+        color: #333;
+    }
+
+        nav.colapse-nav .dropdown-content {
+            color: #333;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+    
+  
+/* Hamburger menu ends here */
+
+
+/* Dropdown navigation starts */
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.dropbtn {
+    color: darkgreen;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    min-width: 160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content li:hover {
+        background-color: rgba(0, 0, 0, 0.10);
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(0, 0, 0, 0.10);
+    }
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(22, 112, 11, 0.40);
+}
+/* Dropdown navigation ends */
+
+
+#headerParent {
+    height: 50px;
+    background-color: white;
+    list-style: none;
+    padding: 15px 0 0 0;
+    border-bottom: 2px solid #16700b;
+    position: static;
+    margin: 30px 0px 70px 0px;
+}
+
+    #headerParent ul {
+        display: block;
+        padding: 0;
+    }
+
+    #headerParent li {
+        display: inline-block;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 10px 10px 10px;
+    }
+
+    #headerParent a {
+        text-decoration: none;
+        color: #333;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0 0 0 0;
+        height: 33px;
+        text-align: center;
+        vertical-align: middle;
+        transition-duration: 50ms;
+    }
+
+#drop-menu li {
+    display: none;
+}
+
+    #headerParent li:hover > #drop-menu li {
+        display: block;
+        float: none;
+    }
+    #drop-menu li {
+        background: #666;
+        color: rgba(255,255,255,0.7)
+    }
+    #drop-menu li:last-child {
+        border-radius: 0px 0px 5px 5px;
+    }
+
+.nav1 {
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 0;
+    float: left;
+}
+
+.nav2 {
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 0;
+    float: right;
+}
+
+#logoDiv {
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+    pointer-events: none;
+    width: 100%;
+}
+
+#logoRow {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    pointer-events: none;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+}
+
+.logoBG {
+    z-index: 11;
+    width: 205px;
+    height: 205px;
+    position: absolute;
+    background-color: #fff;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.img-responsive {
+    width: 170px;
+    min-width: 170px;
+    overflow: visible;
+    height: 170px;
+    position: relative;
+    top: 16px;
+    left: 4px;
+    z-index: 12;
+    pointer-events:auto;
+}
+
+.headline {
+    text-align: center;
+}
+
+#nyFaContainer {
+    background-color: rgba(255, 0, 187, 0.77);
+    height: 200px;
+    position: relative;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+}
+
+#nyheder {
+    background-color: chartreuse;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+#fakta {
+    background-color: #28b930;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+
+li.panel-title {
+    color:aqua;
+    text-decoration:none;
+}
+
+
+
+
+/*-----  Hjem page starts  -----*/
+h4 {
+    font-size: 30px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+#carouselOuter {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+}
+
+#imageCarousel {
+    height: 300px;
+}
+
+.carousel-inner {
+}
+
+#carouselImage {
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+}
+
+#returnedPicture {
+    width: 100%;
+}
+
+.carousel-caption {
+    font-size: 1.5em;
+    text-shadow: 0em 0em 1em black, 0em 0em 1em black, 0em 0em 1em black, 0em 0em 1em black, 0em 0em 1em black;
+}
+
+#container1 {
+    background-color: white;
+    padding: 0;
+    height: 300px;
+}
+
+#container2 {
+    background-color: white;
+    padding: 20px 50px 20px 50px;
+    color: #1a3e16;
+}
+    #container2 p {
+        color: #1a3e16;
+    }
+
+#container3 {
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    background-color: aliceblue;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+    #container3 img {
+        width: 100%;
+        position: absolute;
+    }
+
+    #container3 div {
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.7 );
+        position: absolute;
+        display: inline-block;
+        margin: 0;
+        padding: 20px 20px 20px 30px;
+    }
+
+    #container3 h5 {
+        z-index: 3;
+        color: white;
+        font-size: 30px;
+    }
+
+    #container3 h3 {
+        z-index: 3;
+        color: white;
+        margin: 10px 0 0 0;
+        font-size: 30px;
+    }
+
+
+#container4 {
+    background-color: white;
+    overflow: hidden;
+    padding: 20px 50px 20px 50px;
+}
+    #container4 h5 {
+        color: #1a3e16;
+    }
+
+#container5 {
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    background-color: aliceblue;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+    #container5 img {
+        width: 100%;
+        position: absolute;
+    }
+
+    #container5 div {
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.7 );
+        position: absolute;
+        display: inline-block;
+        margin: 30px 0 0 30px;
+        padding: 20px;
+    }
+
+    #container5 h3 {
+        z-index: 3;
+        font-size: 30px;
+        color: white;
+    }
+
+    #container5 h5 {
+        z-index: 3;
+        font-size: 20px;
+        color: white;
+    }
+
+.ghostButton {
+    color: white;
+    border: 1px solid white;
+    display: block;
+    z-index: 3;
+    border-radius: 8px;
+    width: 300px;
+    padding: 8px;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none!important;
+    -webkit-transition: color 0.1s ease-out, background-color 0.1s ease-out;
+    transition: color 0.1s ease-out, background-color 0.1s ease-out;
+}
+
+    .ghostButton:hover, .ghostButton:focus {
+        background-color: rgba(22, 112, 11, 0.7);
+        color: white;
+        -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-in;
+        transition: color 0.1s ease-in, background-color 0.1s ease-in;
+    }
+
+
+/*-----  Hjem page ends  -----*/
+
+
+
+/*-----  Find Uddannelse page starts  -----*/
+
+.findUddannelseTitle {
+    background: 
+        url('../images/mari-boy-feeding-ducks-on-farm-580492411-572919ed3df78ced1f0b9f8b.jpg'), 
+        no-repeat, 
+        fixed,
+        center; 
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 70px;
+}
+    .findUddannelseTitle h3 {
+        color: white;
+        font-size: 55px;
+        font-weight: bold;
+        font-family: Arial;
+        -webkit-text-stroke: 3px rgba(0,0,0,0.7);
+        margin: auto;
+        text-align: center;
+    }
+
+#findUddannelseContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Expanding {
+    position: relative;
+    margin-bottom: 2px;
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#ExpandingEsbjerg:hover {
+    height: 600px;
+}
+.Expanding:hover {
+    height: 410px;
+}
+
+#ExpandingImage {
+    width: 120%;
+    position: absolute;
+    z-index: 2;
+}
+
+#ExpandingLogo {
+    position: absolute;
+    padding: 10px;
+    display: table;
+    top: 0;
+    left: 0;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.ExpandingButtons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%
+}
+.ExpandingButtons .ghostButton {
+    color: white;
+    border: 1px solid white;
+    display: inline-block;
+    z-index: 3;
+    border-radius: 8px;
+    width: 33%;
+    height: 100px;
+    padding: 30px;
+    margin: auto;
+    font-size: 2em;
+    text-decoration: none !important;
+    -webkit-transition: color 0.1s ease-out, background-color 0.1s ease-out;
+    transition: color 0.1s ease-out, background-color 0.1s ease-out;
+}
+    #ExpandingButtonsEsbjerg .ghostButton {
+        color: white;
+        border: 1px solid white;
+        display: inline-block;
+        z-index: 3;
+        border-radius: 8px;
+        width: 48%;
+        height: 100px;
+        padding: 30px;
+        margin: auto;
+        font-size: 2em;
+        text-decoration: none !important;
+        -webkit-transition: color 0.1s ease-out, background-color 0.1s ease-out;
+        transition: color 0.1s ease-out, background-color 0.1s ease-out;
+    }
+
+    .ExpandingButtons .ghostButton:hover, .ExpandingButtons .ghostButton:focus {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: white;
+        -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-in;
+        transition: color 0.1s ease-in, background-color 0.1s ease-in;
+    }
+    
+    
+    .ExpandingOverlay1, .ExpandingOverlay2, .ExpandingOverlay3, .ExpandingOverlay4 {
+        z-index: 4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        margin: 0;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+.Expanding:hover > .ExpandingOverlay1 {
+    background-color: rgba(22, 112, 11, 0.8);
+}
+
+.Expanding:hover > .ExpandingOverlay2 {
+    background-color: rgba(11, 111, 27, 0.8);
+}
+
+.Expanding:hover > .ExpandingOverlay3 {
+    background-color: rgba(103, 111, 11, 0.8);
+}
+
+.Expanding:hover > .ExpandingOverlay4 {
+    background-color: rgba(111, 67, 11, 0.8);
+}
+
+
+.ExpandingTitle {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Arial;
+    -webkit-text-stroke: 4px rgba(0,0,0,0.7);
+    margin-right: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.Expanding:hover > .ExpandingTitle {
+    opacity: 0;
+}
+
+.Addresse {
+    z-index: 4;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.Expanding:hover > .Addresse {
+    opacity: 1;
+}
+
+.erhvervstemaer {
+    background-color: none;
+    z-index: 4;
+    position: absolute;
+    left: 25px;
+    top: 120px;
+    bottom: 0;
+    right: 25px;
+    display: inline-block;
+    opacity: 0;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+    .Expanding:hover > .erhvervstemaer {
+        opacity: 1;
+    }
+.erhvervstemaerTitle {
+    margin-bottom: 10px;
+}
+.erhvervstemaer p, h4, h5 {
+    margin: 5px;
+    color: white;
+}
+.erhvervstemaer h4 {
+    font-size: 20px;
+}
+.erhvervstemaer h5 {
+    font-size: 18px;
+    margin-top: 35px;
+}
+.erhvervstemaer p {
+    font-size: 15px;
+}
+
+/* Fag Mål og Formål starts */
+
+.textContainer {
+    min-height: 200px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+    .textContainer div {
+        display: inline-block;
+    }
+    .textContainer h5 {
+        font-size: 18px;
+        color: black;
+    }
+#textPageImage {
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 200px;
+}
+        .textContainer img {
+            display: inline-block;
+            position: absolute;
+            height: 200px;
+        }
+
+
+/* Fag Mål og Formål ends */
+/*.staffContainer {
+    background-color: black;
+    z-index: 4;
+    position: absolute;
+    left: 0;
+    top: 120px;
+    bottom: 0;
+    display: inline-block;
+    opacity: 0;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.StaffDivider {
+    display: block!important;
+    height: 30px;
+}
+
+.Expanding:hover > .staffContainer {
+    opacity: 1;
+}
+.staffContainer div {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.staffContainer p, h4, h5 {
+    margin: 1px;
+    color: white;
+}*/
+/*-----  Find Uddannelse page ends  -----*/
+/* General media-queries */
+@media screen and (min-width: 1050px) {
+    #container3 div {
+            position: absolute;
+            top: 30%;
+            bottom: 30%;
+            left: 30%;
+        }
+
+            #container3 div h3, #container3 div h5 {
+                font-size: 30px;
+            }
+    }
+
+
+    @media screen and (max-width: 1050px) {
+        #container3 div {
+            position: absolute;
+            top: 30%;
+            bottom: 30%;
+            left: 25%;
+        }
+
+            #container3 div h3, #container3 div h5 {
+                font-size: 30px;
+            }
+
+        #ExpandingEsbjerg:hover {
+            height: 650px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .logoBG {
+            position: relative;
+            right: 62px;
+        }
+    }
+
+    @media screen and (max-width: 910px) {
+        #container1 {
+            height: 300px;
+        }
+
+        #container2 {
+        }
+
+        #container3 div {
+            position: absolute;
+            top: 30%;
+            bottom: 30%;
+            left: 20%;
+        }
+
+            #container3 div h3, #container3 div h5 {
+                font-size: 25px;
+            }
+
+        #container4 {
+            height: 320px;
+        }
+
+        #container6 {
+            height: 320px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .menu-on, .menu-off {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #headerParent ul {
+            display: none;
+        }
+
+        #headerParent {
+            padding-top: 5px;
+            height: 40px;
+        }
+
+        #KUU-title {
+            margin-top: 130px;
+        }
+
+        #logoDiv {
+            margin: auto;
+        }
+
+        .logoBG {
+            width: 105px;
+            height: 105px;
+            position: relative;
+            left: 0px;
+            background-color: #fff;
+        }
+
+        .img-responsive {
+            width: 88px;
+            min-width: 88px;
+            overflow: visible;
+            height: 88px;
+            position: relative;
+            top: 9px;
+            left: -6px;
+            z-index: 1;
+        }
+
+        #container1 {
+            height: 300px;
+        }
+
+        #container3 {
+            height: 200px;
+            font-size: 10px;
+        }
+
+            #container3 div {
+                position: absolute;
+                top: 7%;
+                bottom: 7%;
+                left: 5%;
+            }
+
+                #container3 div h3, #container3 div h5 {
+                    font-size: 25px;
+                }
+
+        #container5 {
+            height: 200px;
+        }
+
+        #textPageImage {
+            display: inline-block;
+            position: static;
+            min-height: 100px;
+            width: 100%;
+        }
+
+        .textContainer img {
+           display: block;
+            position: absolute;
+            width: 100%;
+        }
+
+    }

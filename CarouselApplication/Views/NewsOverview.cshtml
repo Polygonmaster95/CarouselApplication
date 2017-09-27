@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.NewsOverview>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+    var ListOfNews = CurrentPage.Children();
+}
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div><a href="#" role="button" class="btn btn-primary">Test</a></div>
+
+        <div id="What">
+            <h4>@CurrentPage.Name</h4>
+            @CurrentPage.newsOverviewBodyText
+            @foreach (var news in ListOfNews)
+            {
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="@news.Url"><h3 class="panel-title">@news.Name</h3></a>
+                    </div>
+                    <div class="panel-body">
+                        @Umbraco.Truncate(news.newsText,100)
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

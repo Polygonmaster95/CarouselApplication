@@ -1,0 +1,120 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+
+
+Wait what?
+
+
+<div class="container-fluid" id="container1">
+
+    <div id="carouselOuter" class="container col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-xl-10 col-xl-offset-1 center">
+        <!-- Carousel slider starts -->
+            <div>
+                <div id="imageCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+                    <!--'Slide' class gives animation, 'slide-interval' determines time-->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @{
+                            var selection = Umbraco.Content(1153).Children;     <!--Selects child-elements of whichever content has the ID-->
+                            var activityIndicators = "null";
+                            var firstItemIndicators = true;
+                            int indicatorNum = 0;
+                        }
+                        @{foreach (var item in selection)
+                            {
+                                if (firstItemIndicators)
+                                {
+                                    activityIndicators = "active";
+                                    firstItemIndicators = false;
+                                }
+                                else
+                                {
+                                    activityIndicators = " ";
+                                }
+
+                                <li data-target="#imageCarousel" data-slide-to="@indicatorNum" class="@activityIndicators"></li>
+
+                                indicatorNum++;
+                            } }
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        @{
+                            var activityWrapper = "item";
+                            bool firstItemWrapper = true;               <!--FirstItem is true-->
+                        }
+                        @{foreach (var item in selection)
+                            {
+
+                                if (firstItemWrapper)
+                                {
+                                    activityWrapper = "item active";
+                                    firstItemWrapper = false;          <!--FirstItem becomes false once the first item is set to "item active"-->
+                                }
+                                else
+                                {
+                                    activityWrapper = "item";
+                                }
+
+
+                                <div class="@activityWrapper" role="option" id="carouselImage">
+                                    <a href="#"> <img src="@item.Billede" alt="@item.SlideName" id="returnedPicture" /> </a>
+                                    <div class="carousel-caption">
+                                        <p>@item.Caption</p>
+                                    </div>
+                                </div>
+                            } }                                  <!--FirstItem becomes true again, because changesd made within the loop are not ratined when it ends-->
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" id="leftCarouselControl" href="#imageCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" id="rightCarouselControl" href="#imageCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- Carousel slider ends -->
+
+<div class="container-fluid" id="container2">
+        <h3>Nyheder</h3>
+        <h5>@CurrentPage.nyheder</h5>
+</div>
+
+
+<div class="container-fluid" id="container3">
+    <img src="~/images/M-Final_TTYSU1461.jpg" />
+    <div>
+        <h3>Før du starter din uddannelse.</h3>
+        <h5>Download retningslinjerne for SU mm.</h5>
+        <a class="ghostButton" href="#">Her</a>
+    </div>
+</div>
+
+<div class="container-fluid" id="container4">
+    <h3>Fakta om KUU</h3>
+    <h5>@CurrentPage.faktaOmKUU</h5>
+</div>
+
+
+<div class="container-fluid" id="container5">
+    <img src="~/images/young.people.large.png" />
+        <div>
+            <h3>Vil du være Erhvervs Assistent, og have adgang til en alternativ vej til drømme uddannelsen/jobbet? <br />
+            På KUU kan du med udgangspunkt i håndfaste værktøjer, blive uddannet Erhvervs Assistent inden for dit ønskede område. <br />
+            Uddannelsen kombinerer teori og praksis.</h3>
+            <h5>KUU bliver udbudt af 4 uddannelses centre i Esbjerg, Ribe, Varde og Vejen. Tilsammen tilbyder vi en række spændende erhvervstemaer.<br />
+            Uddannelsen varer 2 år, opdelt i 4 dele. Hele forløbet er SU berettiget! <br />
+            Du vælger selv sammen med din UU-vejleder det erhvervstema som passer bedst på dine mål og drømme.</h5>
+
+        </div>
+</div>
