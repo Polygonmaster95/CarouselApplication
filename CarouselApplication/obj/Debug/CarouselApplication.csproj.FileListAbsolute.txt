@@ -142,3 +142,4 @@ C:\Users\Elev\Documents\Work - arbejdskomputer\Umbraco\CarouselApplication\Carou
 C:\Users\Elev\Documents\Work - arbejdskomputer\Umbraco\CarouselApplication\CarouselApplication\obj\Debug\CarouselApplication.csprojResolveAssemblyReference.cache
 C:\Users\Elev\Documents\Work - arbejdskomputer\Umbraco\CarouselApplication\CarouselApplication\obj\Debug\CarouselApplication.dll
 C:\Users\Elev\Documents\Work - arbejdskomputer\Umbraco\CarouselApplication\CarouselApplication\obj\Debug\CarouselApplication.pdb
+C:\Users\Elev\Documents\Work - arbejdskomputer\Umbraco\CarouselApplication\CarouselApplication\obj\Debug\CarouselApplication.csproj.CoreCompileInputs.cache

@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e7c8f061f9fb3e9")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ccebf87b0bf46f0a")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.6")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -919,6 +919,87 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Image 1: Dette billede vil stå ved siden af "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("image1")]
+		public string Image1
+		{
+			get { return this.GetPropertyValue<string>("image1"); }
+		}
+
+		///<summary>
+		/// Image 2: Dette billede vil stå ved siden af "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("image2")]
+		public string Image2
+		{
+			get { return this.GetPropertyValue<string>("image2"); }
+		}
+
+		///<summary>
+		/// Image 3: Dette billede vil stå ved siden af "Text Section 5"
+		///</summary>
+		[ImplementPropertyType("image3")]
+		public string Image3
+		{
+			get { return this.GetPropertyValue<string>("image3"); }
+		}
+
+		///<summary>
+		/// Text Section 1: Dette er den første bid tekst på siden.
+		///</summary>
+		[ImplementPropertyType("textSection1")]
+		public IHtmlString TextSection1
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection1"); }
+		}
+
+		///<summary>
+		/// Text Section 2: Denne tekst vil stå under "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("textSection2")]
+		public IHtmlString TextSection2
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection2"); }
+		}
+
+		///<summary>
+		/// Text Section 3: Denne tekst vil stå ved siden af "Image 2"
+		///</summary>
+		[ImplementPropertyType("textSection3")]
+		public IHtmlString TextSection3
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection3"); }
+		}
+
+		///<summary>
+		/// Text Section 4: Denne tekst vil stå under "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("textSection4")]
+		public IHtmlString TextSection4
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection4"); }
+		}
+
+		///<summary>
+		/// Text Section 5: Denne tekst vil stå ved siden af "Image 3"
+		///</summary>
+		[ImplementPropertyType("textSection5")]
+		public IHtmlString TextSection5
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection5"); }
+		}
+
+		///<summary>
+		/// Text Section 6: Denne tekst vil stå under "Text Section 5"
+		///</summary>
+		[ImplementPropertyType("textSection6")]
+		public IHtmlString TextSection6
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection6"); }
+		}
 	}
 
 	/// <summary>KUU Varde</summary>
@@ -945,6 +1026,60 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Image 1: Dette billede vil stå ved siden af "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("image1")]
+		public string Image1
+		{
+			get { return this.GetPropertyValue<string>("image1"); }
+		}
+
+		///<summary>
+		/// Image 2: Dette billede vil stå ved siden af "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("image2")]
+		public string Image2
+		{
+			get { return this.GetPropertyValue<string>("image2"); }
+		}
+
+		///<summary>
+		/// Text Section 1: Den første bid tekst på siden. Dette vil stå ved siden af "Image
+		///</summary>
+		[ImplementPropertyType("textSection1")]
+		public IHtmlString TextSection1
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection1"); }
+		}
+
+		///<summary>
+		/// Text Section 2: Denne text vil stå under "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("textSection2")]
+		public IHtmlString TextSection2
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection2"); }
+		}
+
+		///<summary>
+		/// Text Section 3: Denne tekst vil stå under "Text Section 2" og ved siden af "Image 2"
+		///</summary>
+		[ImplementPropertyType("textSection3")]
+		public IHtmlString TextSection3
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection3"); }
+		}
+
+		///<summary>
+		/// Text Section 4: Denne tekst vil stå under "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("textSection4")]
+		public IHtmlString TextSection4
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection4"); }
+		}
 	}
 
 	/// <summary>KUU Vejen</summary>
@@ -970,6 +1105,69 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<KUuvejen, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Image 1: Dette billede vil stå ved siden af "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("image1")]
+		public string Image1
+		{
+			get { return this.GetPropertyValue<string>("image1"); }
+		}
+
+		///<summary>
+		/// Image 2: Dette billede vil stå ved siden af "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("image2")]
+		public string Image2
+		{
+			get { return this.GetPropertyValue<string>("image2"); }
+		}
+
+		///<summary>
+		/// Text Section 1: Denne er den første bid tekst på siden.
+		///</summary>
+		[ImplementPropertyType("textSection1")]
+		public IHtmlString TextSection1
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection1"); }
+		}
+
+		///<summary>
+		/// Text Section 2: Denne tekst vil stå under "Text Section 1"
+		///</summary>
+		[ImplementPropertyType("textSection2")]
+		public IHtmlString TextSection2
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection2"); }
+		}
+
+		///<summary>
+		/// Text Section 3: Denne tekst vil stå ved siden af "Image 2"
+		///</summary>
+		[ImplementPropertyType("textSection3")]
+		public IHtmlString TextSection3
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection3"); }
+		}
+
+		///<summary>
+		/// Text Section 4: Denne tekst vil stå under "Text Section 3"
+		///</summary>
+		[ImplementPropertyType("textSection4")]
+		public IHtmlString TextSection4
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection4"); }
+		}
+
+		///<summary>
+		/// Text Section 5: Denne tekst vil stå under "Text Section 4"
+		///</summary>
+		[ImplementPropertyType("textSection5")]
+		public IHtmlString TextSection5
+		{
+			get { return this.GetPropertyValue<IHtmlString>("textSection5"); }
 		}
 	}
 
