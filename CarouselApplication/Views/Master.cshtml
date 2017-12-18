@@ -11,6 +11,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="@CurrentPage.siteIcon" />
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!-- jquary  -->
@@ -24,7 +27,7 @@
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-        <link href="~/css/Style.css?=v3" rel="stylesheet" />
+        <link href="~/css/Style.css?=v6" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 
@@ -86,9 +89,43 @@
         
     @RenderBody()
 
+
+        <footer class="container-fluid col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer">
+
+                <div class="footerInner container">
+
+                    <div class="footerImageContainer" id="footerEfe">
+                        <a href="http://efe.nu/" target="_blank">
+                            <img src="~/images/efeLogo.png" id="FooterLogo" /> 
+                        </a>
+                    </div>
+
+                    <div class="footerImageContainer" id="footerVarde">
+                        <a target="_blank" href="http://psvarde.dk/">
+                            <img src="~/images/VardeLogo.png" id="FooterLogo" />
+                        </a>
+                    </div>
+
+                    <div class="footerImageContainer" id="footerRibe">
+                        <a target="_blank" href="https://www.lustrupholm.dk/forside.aspx">
+                            <img src="~/images/lustrupholm-logo.png" id="FooterLogo" />
+                        </a>
+                    </div>
+
+                    <div class="footerImageContainer" id="footerVejen">
+                        <a target="_blank" href="http://www.psvejen.dk/">
+                        <img src="~/images/Logo-Vejen.png" id="FooterLogo" />
+                        </a>
+                    </div>
+
+                </div>
+
+        </footer>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/js/bootstrap.min.js"></script>
     </body>
+
 </html>

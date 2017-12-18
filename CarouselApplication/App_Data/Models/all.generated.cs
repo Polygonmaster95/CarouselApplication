@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ccebf87b0bf46f0a")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "cfeff0f9c4b5aceb")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -443,6 +443,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// siteIcon: Dette vil være iconet som vises i sidens fane-blad
+		///</summary>
+		[ImplementPropertyType("siteIcon")]
+		public string SiteIcon
+		{
+			get { return this.GetPropertyValue<string>("siteIcon"); }
+		}
+
+		///<summary>
 		/// Site name
 		///</summary>
 		[ImplementPropertyType("siteName")]
@@ -493,6 +502,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string ImageName
 		{
 			get { return this.GetPropertyValue<string>("imageName"); }
+		}
+
+		///<summary>
+		/// Nederste Tekst: Den sidste bid tekst på forsiden.
+		///</summary>
+		[ImplementPropertyType("nedersteTekst")]
+		public IHtmlString NedersteTekst
+		{
+			get { return this.GetPropertyValue<IHtmlString>("nedersteTekst"); }
 		}
 
 		///<summary>
@@ -760,12 +778,48 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Center Image 1
+		///</summary>
+		[ImplementPropertyType("centerImage1")]
+		public string CenterImage1
+		{
+			get { return this.GetPropertyValue<string>("centerImage1"); }
+		}
+
+		///<summary>
+		/// Center Image 2
+		///</summary>
+		[ImplementPropertyType("centerImage2")]
+		public string CenterImage2
+		{
+			get { return this.GetPropertyValue<string>("centerImage2"); }
+		}
+
+		///<summary>
+		/// Center Image 3
+		///</summary>
+		[ImplementPropertyType("centerImage3")]
+		public string CenterImage3
+		{
+			get { return this.GetPropertyValue<string>("centerImage3"); }
+		}
+
+		///<summary>
 		/// Info
 		///</summary>
 		[ImplementPropertyType("info")]
 		public IHtmlString Info
 		{
 			get { return this.GetPropertyValue<IHtmlString>("info"); }
+		}
+
+		///<summary>
+		/// SU Image
+		///</summary>
+		[ImplementPropertyType("sUImage")]
+		public string SUimage
+		{
+			get { return this.GetPropertyValue<string>("sUImage"); }
 		}
 	}
 
